@@ -1,0 +1,19 @@
+body{
+    background-image: url("../img/bg.jpg");
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 100%;
+}
+#destaque{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(17, 16, 16, 0.527);
+}
+/*#destaque h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
