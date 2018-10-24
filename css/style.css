@@ -6,14 +6,31 @@ body{
     align-items: center;
     background-size: 100%;
 }
-#destaque{
+.main{
+    width: 500px;
+    height: 641.5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgba(17, 16, 16, 0.527);
+    flex-direction: column;
+    background-color: ;
 }
-/*#destaque h1{
+.main h1{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    font-variant: small-caps;
+    color: rgba(41, 31, 31, 0.808);
+}
+#main{
+    width: 100px;
+    height: 100px;
+    background-color: ;
+    position: relative;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes example {
+    0%   {left:0px; top:0px;}    
+    50%  {left:0px; top:30px;}
+    100% {left:0px; top:0px;}
 }
