@@ -1,13 +1,13 @@
 body{
     background-image: url("../img/bg.svg");
-    background-repeat: no-repeat;
+    
     display: flex;
     justify-content: center;
     align-items: center;
-    background-size: 100%;
+    
 }
 .main{
-    width: 500px;
+    width: 100%;
     height: 641.5px;
     display: flex;
     justify-content: center;
@@ -17,11 +17,15 @@ body{
 }
 .main h1{
     display: flex;
+    justify-content: center;
+    align-items: center;
     font-variant: small-caps;
     color: rgba(41, 31, 31, 0.808);
 }
 #main{
-    width: 100px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
     height: 100px;
     background-color: ;
     position: relative;
