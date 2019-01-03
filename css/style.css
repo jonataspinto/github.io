@@ -6,23 +6,28 @@ body{
     justify-content: center;
     align-items: center; 
 }
+h2{
+    font-family: 'Franklin Gothic Medium';
+}
 .header{
     width:100%;
+    position: sticky;
+    top: 0;
+    background-color: rgba(173, 216, 730, 0.20);
+    z-index: 5;
 }
 .header_container{
     margin: 10px;
     padding: 0px 10px;
     display:flex;
     justify-content: space-between;
-    /* width: 100%; */
-    /* background-color: blue; */
+    align-items: center
 }
 .header_container ul{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-    list-style: none;
-   
+    list-style: none;   
 }
 .header_container ul li{
     padding: 0px 35px;
@@ -38,8 +43,7 @@ body{
     width:90px;
 }
 .main{
-    width: 100%;
-    height: 641.5px;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,11 +58,6 @@ body{
     color: rgba(41, 31, 31, 0.808);
 }
 #main{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 100px;
-    background-color: ;
     position: relative;
     animation-name: example;
     animation-duration: 5s;
@@ -67,20 +66,19 @@ body{
 
 @media (max-width: 720px){
     .header_container{
-        justify-content: center;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
         margin: 0px;
     }
     .header_container ul{
         display: none
     }
     .menu-icon{
-        width:100%;
         display: flex;
-        /* align-items: flex-start; */
     }
     .menu-icon img{
         width: 35px;
-        margin-left: 5px;
     }
 }
 
