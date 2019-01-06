@@ -6,15 +6,15 @@ body{
     justify-content: center;
     align-items: center; 
 }
-h2{
-    font-family: 'Franklin Gothic Medium';
+h1{
+    font-family: 'century gothic';
 }
 .header{
     width:100%;
     position: sticky;
     top: 0;
-    background-color: rgba(173, 216, 730, 0.20);
-    z-index: 5;
+    background-color: rgba(59, 59, 59, 0.74);
+    /* z-index: 5; */
 }
 .header_container{
     margin: 10px;
@@ -43,6 +43,7 @@ h2{
     width:90px;
 }
 .main{
+    margin-top: 10%;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -62,6 +63,15 @@ h2{
     animation-name: example;
     animation-duration: 5s;
     animation-iteration-count: infinite;
+}
+.git{
+    font-size: 20px;
+    font-style: italic;
+}
+.negrito{
+    font-size: 22px;
+    font-weight: bold;
+    font-style: normal;
 }
 
 @media (max-width: 720px){
