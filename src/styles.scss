@@ -1,0 +1,137 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Overpass');
+
+body{
+    font-family: 'Overpass', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center;  */
+}
+.body-container{
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+}
+h1{
+    font-family: 'century gothic';
+}
+.nav-container{
+    position: sticky;
+    top: 0;
+    margin: 0px;
+    padding: 0px ;
+    width: 100%;
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(59, 59, 59, 0.329);
+}
+.nav-nome{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 15px 0px 0px;    
+}
+.nav-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px;
+}
+.devs{
+    padding-right: 25px;
+    margin: 0px;
+    display:flex;
+    align-items: center;
+}
+.devs a img{
+    width: 40px;
+}
+#imgdevs{
+    width:50px;
+}
+.main{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.main p{
+    margin: 0px;
+}
+.main h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-variant: small-caps;
+    color: rgba(41, 31, 31, 0.808);
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-width: 1px;
+    padding: 10px 0px 5px 0px;
+    background-color: white;
+}
+#devs-link{
+    text-decoration: none;
+    color: rgba(19, 75, 40, 0.808)
+}
+#main{
+    position: relative;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+.git{
+    font-style: italic;
+}
+.negrito{
+    font-weight: bold;
+    font-style: normal;
+}
+footer {
+    display:flex;
+    justify-content: center;
+    background-color: #666666;
+    width: 100%;
+    padding: 15px 0px 15px 0px
+}
+
+@media (max-width: 720px){
+    .nav-container{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+    }
+    .header_container ul{
+        display: none
+    }
+    .menu-icon{
+        display: flex;
+    }
+    .menu-icon img{
+        width: 35px;
+    }    
+    .main p{
+        margin: 7px;
+    }
+    .main {
+        height: 100vh;
+        padding: 5px 5px;        
+    }
+}
+
+@media(min-width:721px){
+    .menu-icon{
+        display:none;
+    }
+}
+@keyframes example {
+    0%   {left:0px; top:0px;}    
+    50%  {left:0px; top:30px;}
+    100% {left:0px; top:0px;}
+}
