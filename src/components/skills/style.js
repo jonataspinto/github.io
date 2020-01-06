@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 
 const Container = styled.div`
-    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100vw;
-    height: 100vh;
+    height: 80%
 `
 
 export {Container}

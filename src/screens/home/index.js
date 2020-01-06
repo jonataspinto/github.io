@@ -1,11 +1,12 @@
 import React from 'react';
 import { Container } from './style';
-import {Header} from '../../components'
+import {Header, Skills} from '../../components'
 
 const Home =() =>{
   return (
       <Container>
         <Header/>
+        <Skills/>
       </Container>
   );
 }
