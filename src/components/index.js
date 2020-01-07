@@ -1,5 +1,5 @@
 import Header from './header'
 import Card from './card'
-import Button from './button'
+import { Button, ButtonIcon, SetThemeIcon} from './button'
 
-export { Header, Card, Button }
+export { Header, Card, Button, ButtonIcon, SetThemeIcon }
