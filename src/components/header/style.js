@@ -14,4 +14,4 @@ const Avatar = styled.img`
 const FullName= styled.h1`
 
 `
-export {Container, Avatar}
+export {Container, Avatar, FullName}
