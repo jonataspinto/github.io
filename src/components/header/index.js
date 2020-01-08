@@ -1,18 +1,44 @@
-import React, {useEffect} from 'react';
+import React, {useEffect } from 'react';
 import { Container, Avatar } from './style';
-import { GetGithubProfile } from '../../services'
+import {SetThemeIcon} from '../index'
+import {useDispatch, useSelector } from 'react-redux'
+import {handleTheme} from '../../store/theme/theme.action'
 
 export default function Header() {
 
+  const dispatch = useDispatch()
+  const store = useSelector(state=> state)
+  const { data, theme } = store
+  // const [theme, setTheme] = useState('light')
+
   useEffect(() => {
-    GetGithubProfile()
-    // console.log(res);
     
   }, [])
 
+  const setTheme = body=>{
+    dispatch(
+      handleTheme(body)
+    )
+  }
+
+  const Theme = (body)=>{
+    switch(body){
+      case 'dark':
+        return setTheme('light')
+      case 'light':
+        return setTheme('dark')
+      default:
+        break
+    }
+  }
+
   return (
       <Container>
-        <Avatar src="https://scontent.fsdu5-1.fna.fbcdn.net/v/t1.0-9/s960x960/45731002_1912403655534586_1103986446827520000_o.jpg?_nc_cat=101&_nc_ohc=z4cWmAU1aQAAQnR1WucUAnUbjx2ZMXBp_ajzOQQLgxE9iqRNhgmzpXCKA&_nc_ht=scontent.fsdu5-1.fna&oh=37c5355c4e1101f96d0a1bd9795f3bc2&oe=5EA46817"/>
+        {data.user && <Avatar src={data.user.data.avatar_url}/>}
+        <SetThemeIcon
+          action={()=> Theme(theme.theme || theme.initial_state.theme)}
+          theme={theme.theme || theme.initial_state.theme}
+        />
       </Container>
   );
 }

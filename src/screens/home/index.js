@@ -1,11 +1,26 @@
-import React from 'react';
+import React,{ useEffect } from 'react';
 import { Container } from './style';
 import {Header} from '../../components'
-
+import { useSelector, useDispatch} from 'react-redux'
+import { GetProfile } from '../../store/user/user.actions'
 const Home =() =>{
+  const dispatch = useDispatch()
+  const store = useSelector(state=> state)
+  const { data ,theme} =  store
+  
+  useEffect(()=>{
+    ShowProfile()
+  },[])
+
+  const ShowProfile = ()=>{
+    dispatch(GetProfile())     
+  }
+  
   return (
-      <Container>
-        <Header/>
+      <Container
+        themecolor={theme.theme || theme.initial_state.theme}>
+        {data.user && <Header/>  }
+        
       </Container>
   );
 }
