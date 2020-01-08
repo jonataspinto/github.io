@@ -5,8 +5,8 @@ import { useSelector, useDispatch} from 'react-redux'
 import { GetProfile } from '../../store/user/user.actions'
 const Home =() =>{
   const dispatch = useDispatch()
-  const store = useSelector(state=> state.data)
-  const { user, error } =  store
+  const store = useSelector(state=> state)
+  const { data ,theme} =  store
   
   useEffect(()=>{
     ShowProfile()
@@ -17,9 +17,10 @@ const Home =() =>{
   }
   
   return (
-      <Container>
-        {/* {user && console.log(user)  } */}
-        <Header/>
+      <Container
+        themecolor={theme.theme || theme.initial_state.theme}>
+        {data.user && <Header/>  }
+        
       </Container>
   );
 }

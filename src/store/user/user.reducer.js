@@ -2,7 +2,6 @@ import { TYPES } from './user.actions'
 
 const initial_state = {
     user: {},
-    error: '',
 }
 
 export const userReducer = (state = {initial_state}, action)=>{

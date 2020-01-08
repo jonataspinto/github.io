@@ -1,7 +1,7 @@
 import {createStore, combineReducers, applyMiddleware } from 'redux'
 import ReduxThunk from 'redux-thunk'
 import { userReducer } from './user/user.reducer'
-import {themeReducer } from './theme/theme.reducer'
+import { themeReducer } from './theme/theme.reducer'
 
 const rootReducers =  combineReducers({
     data: userReducer,

@@ -1,22 +1,28 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect } from 'react';
 import { Container, Avatar } from './style';
-import { GetGithubProfile } from '../../services'
 import {SetThemeIcon} from '../index'
 import {useDispatch, useSelector } from 'react-redux'
+import {handleTheme} from '../../store/theme/theme.action'
 
 export default function Header() {
 
   const dispatch = useDispatch()
-  const store = useSelector(state=> state.data)
-  const { user, error } =  store
+  const store = useSelector(state=> state)
+  const { data, theme } = store
+  // const [theme, setTheme] = useState('light')
+
   useEffect(() => {
     
   }, [])
 
-  const [theme, setTheme] = useState('light')
+  const setTheme = body=>{
+    dispatch(
+      handleTheme(body)
+    )
+  }
 
-  const handleTheme = (theme)=>{
-    switch(theme){
+  const Theme = (body)=>{
+    switch(body){
       case 'dark':
         return setTheme('light')
       case 'light':
@@ -25,13 +31,13 @@ export default function Header() {
         break
     }
   }
+
   return (
       <Container>
-        {user && <Avatar src={user.data.avatar_url}/>}
-
+        {data.user && <Avatar src={data.user.data.avatar_url}/>}
         <SetThemeIcon
-          action={()=> handleTheme(theme)}
-          theme={theme}
+          action={()=> Theme(theme.theme || theme.initial_state.theme)}
+          theme={theme.theme || theme.initial_state.theme}
         />
       </Container>
   );
