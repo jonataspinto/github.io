@@ -6,7 +6,7 @@ import { GetProfile } from '../../store/user/user.actions'
 const Home =() =>{
   const dispatch = useDispatch()
   const store = useSelector(state=> state)
-  const { data ,theme} =  store
+  const { theme} =  store
   
   useEffect(()=>{
     ShowProfile()
