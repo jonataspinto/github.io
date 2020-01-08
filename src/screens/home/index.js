@@ -1,6 +1,6 @@
 import React,{ useEffect } from 'react';
 import { Container } from './style';
-import {Header} from '../../components'
+import {Header, Skills} from '../../components'
 import { useSelector, useDispatch} from 'react-redux'
 import { GetProfile } from '../../store/user/user.actions'
 const Home =() =>{
@@ -19,8 +19,8 @@ const Home =() =>{
   return (
       <Container
         themecolor={theme.theme || theme.initial_state.theme}>
-        {data.user && <Header/>  }
-        
+        <Header/>
+        <Skills/>
       </Container>
   );
 }
