@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Icon from '@material-ui/core/Icon'
-import { lighten } from 'polished'
+import { lighten, darken } from 'polished'
 
 
 const handleColorType = theme => {
@@ -14,10 +14,30 @@ const handleColorType = theme => {
     }
 };
 
+const Type = (theme)=>{
+    switch(theme){
+        case 'primary':
+            return (`
+                background-color: #798C8C;
+                &&:active{
+                    background-color: ${darken(0.09, '#798C8C')}
+                }
+            `    
+        )
+        default:
+            break
+    }
+}
+
 const ButtonContainer = styled.button`
-    color: ${props=> props.color};
-    width: 150px;
-    height: 80px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+    outline: none;
+    ${({type}) => Type(type)}
+    background-color: ${props=> props.CurrentTheme === 'dark' && lighten(.1,'#798C8C')
+    };
 `
 const TouchIcon = styled(Icon)`
     /* width: auto; */

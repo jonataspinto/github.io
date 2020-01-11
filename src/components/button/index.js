@@ -1,21 +1,18 @@
 import React from 'react';
 import { ButtonContainer , TouchIcon, SetTheme} from './style';
 import Icon from '@material-ui/core/Icon'
+import { useSelector} from 'react-redux'
 
 const Button =(props)=>{
+    const store = useSelector(state=> state)
+    const { theme } =  store
   return (
     <ButtonContainer 
-        color={props.color}
+        type={props.type}
         onClick={props.action}
-    >{props.value &&
-        // <Icon fontSize='large'>
-        //     {props.icon}
-        // </Icon>
-        <Icon color={props.color} className={`fas fa-${props.icon}`}/>
-        }
-
-    </ButtonContainer>
-  );
+        CurrentTheme={theme.theme || theme.initial_state.theme}
+    >{props.value}</ButtonContainer>
+  )
 }
 
 const ButtonIcon =(props)=>{

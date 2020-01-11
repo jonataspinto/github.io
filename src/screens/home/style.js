@@ -13,8 +13,22 @@ const handleColorType = theme => {
 
 const Container = styled.div`
     width: 100vw;
-    height: 100vh;
-    ${({themecolor}) => handleColorType(themecolor)}
+    min-height: 100vh;
+    ${({CurrentTheme}) => handleColorType(CurrentTheme)}
 `
 
-export {Container}
+const TitleProjects = styled.h2`
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+`
+
+const ProjectsSection = styled.section`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100vw;
+`
+
+export {Container, ProjectsSection, TitleProjects }

@@ -49,7 +49,7 @@ export default function Header() {
     <Container
     themecolor={theme.theme || theme.initial_state.theme}
     >
-      {data.user && <Avatar src={data.user.data.avatar_url}/>}
+      {data.user && <Avatar src={data.user.avatar_url}/>}
       <SocialMedia>
         {
           social.map((data, index)=>{
