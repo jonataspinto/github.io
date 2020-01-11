@@ -6,7 +6,6 @@ import { GetProfile } from '../../store/user/user.actions'
 import {Projects} from '../../shared/projects'
 import {LANG} from '../../shared/pt'
 
-
 const Home =() =>{
   const dispatch = useDispatch()
   const store = useSelector(state=> state)
@@ -26,7 +25,7 @@ const Home =() =>{
       >
         <Header/>
         <About/>
-        {/* <Skills/> */}
+        <Skills CurrentTheme={theme.theme || theme.initial_state.theme}/>
         <TitleProjects>{LANG.portfolio}</TitleProjects>
         <ProjectsSection>
           {

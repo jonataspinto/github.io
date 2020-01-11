@@ -1,5 +1,5 @@
 import React, {useEffect } from 'react';
-import { Container, Avatar, SocialMedia, LinkRef, ImgMedia } from './style';
+import { HeaderContainer, Avatar, SocialMedia, LinkRef, ImgMedia } from './style';
 import {SetThemeIcon} from '../index'
 import {useDispatch, useSelector } from 'react-redux'
 import {handleTheme} from '../../store/theme/theme.action'
@@ -46,7 +46,7 @@ export default function Header() {
   }
 
   return (
-    <Container
+    <HeaderContainer
     themecolor={theme.theme || theme.initial_state.theme}
     >
       {data.user && <Avatar src={data.user.avatar_url}/>}
@@ -71,6 +71,6 @@ export default function Header() {
         theme={theme.theme || theme.initial_state.theme}
       />
       </SocialMedia>
-    </Container>
+    </HeaderContainer>
   );
 }

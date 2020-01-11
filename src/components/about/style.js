@@ -1,11 +1,17 @@
 import styled from 'styled-components'
 
 const AboutContainer = styled.div`
-    max-width: 100%;
-    padding: 10px;
-    h2{
-
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    border: none;
+    width: 95%;
+`
+const Title = styled.p`
+    font-size: 25px;
+    display: flex;
+    align-self: flex-start;
 `
 
 const Paragraph = styled.p`
@@ -13,7 +19,8 @@ const Paragraph = styled.p`
     text-align: justify;
     line-height: 25px;
     transition: 1s;
-    padding-top: 15px;
+    padding: 15px 0 0 0;
+    text-indent: 40px;
 `
 
-export { AboutContainer, Paragraph}
+export { AboutContainer, Title, Paragraph}

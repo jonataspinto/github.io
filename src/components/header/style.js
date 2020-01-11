@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { lighten } from 'polished'
 import Icon from '@material-ui/core/Icon'
 
-
 const handleColorType = theme => {
     switch (theme) {
         case 'dark':
@@ -14,10 +13,12 @@ const handleColorType = theme => {
     }
 }
 
-const Container = styled.div`
+const HeaderContainer = styled.div`
     ${({themecolor}) => handleColorType(themecolor)};
+    position: sticky;
+    top: 0;
     transition:.3s;
-    width: 100vw;
+    width: 100%;
     height: 80px;
     display: flex;
     align-items: center;
@@ -49,4 +50,4 @@ const ImgMedia = styled(Icon)`
        border-bottom: solid 3px ${lighten(0.1, "black")};
     }
 `
-export {Container, Avatar, FullName, SocialMedia, LinkRef, ImgMedia }
+export {HeaderContainer, Avatar, FullName, SocialMedia, LinkRef, ImgMedia }

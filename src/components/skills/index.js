@@ -1,21 +1,37 @@
 import React from 'react'
-import { Container } from  './style'
-import { ResponsiveContainer, BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar} from 'recharts'
+import { 
+    SkillsContainer,
+    SkillTitle,
+    ProgressContainer,
+    ProgressBar,
+    Progress,
+    ProgressName
+} from  './style'
 import {LANG} from '../../shared/pt'
-export default function Skills() {    
-      
+
+export default function Skills(props) {      
     return (
-        <Container>
-        <ResponsiveContainer width="80%" height="80%">
-            <BarChart  height={250} data={LANG.skills}>
-                {/* <CartesianGrid strokeDasharray="3 3" /> */}
-                <XAxis dataKey="name" />
-                <YAxis ticks={[0,50,100]} domain={[0, 100]} type="number" />
-                <Tooltip />
-                {/* <Legend /> */}
-                <Bar dataKey="pv" fill="#908194" />
-            </BarChart>
-        </ResponsiveContainer>
-        </Container>
+        <SkillsContainer>
+            <SkillTitle>{LANG.skill}</SkillTitle>   
+            {LANG.skills.map((skill, index)=>{
+                return(
+                    <ProgressContainer key={index}>
+                        <ProgressName>
+                        {skill.name}
+                        </ProgressName>
+                        <ProgressBar
+                            CurrentTheme={props.CurrentTheme}
+                        >
+                            <Progress 
+                                CurrentTheme={props.CurrentTheme}
+                                progress={skill.progress}
+                            >
+                                {`${skill.progress}%`}
+                            </Progress>
+                        </ProgressBar>
+                    </ProgressContainer>
+                )})
+            }
+        </SkillsContainer>
     )
 }
