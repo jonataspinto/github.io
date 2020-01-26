@@ -10,8 +10,9 @@ const AboutContainer = styled.div`
 `
 const Title = styled.p`
     font-size: 25px;
+    font-weight: bold;    
     display: flex;
-    align-self: flex-start;
+    /* align-self: flex-start; */
 `
 
 const Paragraph = styled.p`

@@ -11,8 +11,9 @@ const SkillsContainer = styled.section`
     padding: 30px 0;
 `
 
-const SkillTitle = styled.h2`
-    
+const SkillTitle = styled.p`
+    font-size: 25px;
+    font-weight: bold;    
 `
 
 const ProgressContainer =styled.div`
